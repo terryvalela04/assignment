@@ -165,6 +165,31 @@
     }
 </script>
 
+            <h4>"CLUB LATTE"</h4>      
+
+<p>
+    <button type="button" onclick="showLatteDetails()">Click for more</button>
+</p>
+
+
+<div id="latteDetails" hidden>
+    <img id="latteImage" src="https://github.com/terryvalela04/assignment/blob/main/latte7.jpg?raw=true" alt="Latte">
+    <p id="latteDesc">"SHOTS OF ESPRESSO, THIN FOAMY FROTHED MILK, STEAMED MILK".</p>
+    <p id="lattePrice">Price of each serving: P13.50</p>
+
+    
+    <button type="button" onclick="closeLatteDetails()">Click to Exit</button>
+</div>
+
+<script>
+    function showLatteDetails() {
+        document.getElementById("latteDetails").hidden = false;  
+    }
+
+    function closeLatteDetails() {
+        document.getElementById("latteDetails").hidden = true;  
+    }
+</script>
                   
 
 
