@@ -190,10 +190,32 @@
         document.getElementById("latteDetails").hidden = true;  
     }
 </script>
-                  
+    <h4>"MACHIATTO CARAMEL"</h4>              
 
 
+<p>
+    <button type="button" onclick="showMacchiatoDetails()">Click for more!</button>
+</p>
 
+<
+<div id="macchiatoDetails" hidden>
+    <img id="macchiatoImage" src="https://github.com/terryvalela04/assignment/blob/main/macchiato.jpg?raw=true" alt="Macchiato">
+    <p id="macchiatoDesc">"ESPRESSO", "STEAMED MILK", "VANILLA SYRUP", "CARAMEL DRIZZLE".</p>
+    <p id="macchiatoPrice">Price of each serving: P16.30</p>
+
+    
+    <button type="button" onclick="closeMacchiatoDetails()">Click to Exit</button>
+</div>
+
+<script>
+    function showMacchiatoDetails() {
+        document.getElementById("macchiatoDetails").hidden = false;  
+    }
+
+    function closeMacchiatoDetails() {
+        document.getElementById("macchiatoDetails").hidden = true;  
+    }
+</script>
                   
     <footer>
         <p>&copy; 2025  BIG STEPPA COFFEEHOUSE PASTRY AND BAKERY SHOP</p>
