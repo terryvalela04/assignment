@@ -109,11 +109,34 @@
 </script>                 
 
 
+<h4>" CLASSIC CAPPUCCINO </h4>
+                  
+<p>
+    <button type="button" onclick="showCappuccinoDetails()">Click for more </button>
+
+    
+    <div id="cappuccinoDetails" hidden>
+        <img id="cappuccinoImage" src="https://github.com/terryvalela04/assignment/blob/main/cappuccino1-recipe%20copy.jpg?raw=true" alt="Cappuccino">
+        <p id="cappuccinoDesc">"STEAMED MILK, EQUAL AMOUNTS OF ESPRESSO, FOAMY MILK".</p>
+        <p id="cappuccinoPrice">Price of each serving: P12.50</p>
+
+        
+        <button type="button" onclick="closeCappuccinoDetails()">Click to Exit</button>
+    </div>
+</p>
 
 
+<script>
+    
+    function showMochaDetails() {
+        document.getElementById("CappuccinoDetails").hidden = false;
+    }
 
 
-
+    function closeMochaDetails() {
+        document.getElementById("CappuccinoDetails").hidden = true;
+    }
+</script>      
 
 
 
