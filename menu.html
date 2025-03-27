@@ -137,7 +137,31 @@
 </script>
 
 
+<h4>"NITRO COFFEE"</h4>
+                  <button type="button" onclick="showNitroDetails()">Click for more!</button>
 
+    
+    <div id="nitroDetails" hidden>
+        <img id="nitroImage" src="https://raw.githubusercontent.com/terryvalela04/assignment/main/NITRO%20COFFEEEEE.FINAL.jpg?raw=true" alt="Nitro Coffee">
+        <p id="nitroDesc">"COLD BREWED, CHARGED WITH NITROGEN".</p>
+        <p id="nitroPrice">Price of each serving: P17.90</p>
+
+        
+        <button type="button" onclick="closeNitroDetails()">Click to Exit</button>
+    </div>
+</p>
+
+<script>
+    
+    function showNitroDetails() {
+        document.getElementById("nitroDetails").hidden = false;  
+    }
+
+    
+    function closeNitroDetails() {
+        document.getElementById("nitroDetails").hidden = true;  
+    
+</script>
 
 
 
