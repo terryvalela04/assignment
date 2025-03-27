@@ -30,7 +30,7 @@
 <div id="itemDetails" hidden>
     <img id="espressoImage" src="https://raw.githubusercontent.com/terryvalela04/assignment/main/final%20espresso.jpg" alt="Espresso Cup">
     <p id="espressoDesc">"BOLD,STRONG".</p>
-    <p id="espressoPrice">Price of each serving: P9.50 </p>
+    <p id="espressoPrice">Price of each serving: P10.00 </p>
     
     <button type="button" onclick="closeDetails()"> Click to Exit</button>
 </div>
@@ -47,6 +47,65 @@
     }
 </script>
               </p>
+
+<h4> "ESPRESSO ON THE ROCKS"</h4>
+
+
+
+<p>
+    <button type="button" onclick="showDetails()">Click for more!</button>
+
+
+<div id="icedEspressoDetails" hidden>
+
+    <img src="https://raw.githubusercontent.com/terryvalela04/assignment/main/iced%20espresso.webp" alt="Iced Espresso">
+    <img id="espressoOnTheRocksImage" src="https://raw.githubusercontent.com/terryvalela04/assignment/main/iced%20espresso.webp" alt="Espresso on the Rocks">
+    <p id="espressoOnTheRocksDesc">"ESPRESSO WITH ADDED ICE".</p>
+    <p id="espressoOnTheRocksPrice">Price of each serving: P10.50</p>
+    
+    <button type="button" onclick="closeDetails()"> Click to Exit</button>
+</div>
+
+<script>
+
+    function showDetails() {
+        document.getElementById("itemDetails").hidden = false;
+    }
+
+    
+    function closeDetails() {
+        document.getElementById("itemDetails").hidden = true; 
+    }
+</script>
+              </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                  
+
+
+
+                  
     <footer>
         <p>&copy; 2025  BIG STEPPA COFFEEHOUSE PASTRY AND BAKERY SHOP</p>
     </footer>
