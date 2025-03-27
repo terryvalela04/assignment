@@ -82,8 +82,8 @@
 <h4>"MOCHA EXPRESS"</h4>
 
 
- <p>
-    <button type="button" onclick="showMochaDetails()">Click for More!</button>
+<p>
+    <button type="button" onclick="showMochaDetails()">Click for more!</button>
 
     
     <div id="mochaDetails" hidden>
@@ -97,22 +97,21 @@
 </p>
 
 <script>
-
-    function showDetails() {
-        document.getElementById("itemDetails").hidden = false;
-    }
-
     
-    function closeDetails() {
-        document.getElementById("itemDetails").hidden = true; 
+    function showMochaDetails() {
+        document.getElementById("mochaDetails").hidden = false;  
     }
-</script>       
 
+    // Function to close the Mocha details
+    function closeMochaDetails() {
+        document.getElementById("mochaDetails").hidden = true;  
+    }
+</script>
 
-<h4>" CLASSIC CAPPUCCINO </h4>
+<h4>" CLASSIC CAPPUCCINO"</h4>
                   
 <p>
-    <button type="button" onclick="showCappuccinoDetails()">Click for more </button>
+    <button type="button" onclick="showCappuccinoDetails()">Click for more!</button>
 
     
     <div id="cappuccinoDetails" hidden>
@@ -125,20 +124,17 @@
     </div>
 </p>
 
-
 <script>
-
-    function showDetails() {
-        document.getElementById("itemDetails").hidden = false;
+    
+    function showCappuccinoDetails() {
+        document.getElementById("cappuccinoDetails").hidden = false;  
     }
 
-    
-    function closeDetails() {
-        document.getElementById("itemDetails").hidden = true; 
+    // Function to close the Cappuccino details
+    function closeCappuccinoDetails() {
+        document.getElementById("cappuccinoDetails").hidden = true; 
     }
 </script>
-
-
 
 
 
