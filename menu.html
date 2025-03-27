@@ -53,29 +53,30 @@
 
 
 <p>
-    <button type="button" onclick="showDetails()">Click for more!</button>
+    <button type="button" onclick="showIcedEspressoDetails()">Click for more!</button>
 
+    
     <div id="icedEspressoDetails" hidden>
         <img id="icedEspressoImage" src="https://raw.githubusercontent.com/terryvalela04/assignment/refs/heads/main/iced%20espresso.webp" alt="Iced Espresso">
         <p id="icedEspressoDesc">"ESPRESSO, ICE ADDED".</p>
         <p id="icedEspressoPrice">Price of each serving: P10.50</p>
 
-        <button type="button" onclick="closeDetails()">Click to Exit</button>
+        
+        <button type="button" onclick="closeIcedEspressoDetails()">Click to Exit</button>
     </div>
 </p>
 
 <script>
     
-    function showDetails() {
+    function showIcedEspressoDetails() {
         document.getElementById("icedEspressoDetails").hidden = false;
     }
 
     
+    function closeIcedEspressoDetails() {
         document.getElementById("icedEspressoDetails").hidden = true;
     }
 </script>
-
-
 
 
 
