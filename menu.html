@@ -79,7 +79,34 @@
 </script>
 
 
+<h4>"MOCHA EXPRESS"</h4>
 
+
+ <p>
+    <button type="button" onclick="showMochaDetails()">Click for More</button>
+
+    
+    <div id="mochaDetails" hidden>
+        <img id="mochaImage" src="https://raw.githubusercontent.com/terryvalela04/assignment/refs/heads/main/MOCHA%20MOCHA.webp" alt="Mocha">
+        <p id="mochaDesc">"HOT OR COLD, FOAM, STEAMED MILK, CHOCOLATE SYRUP OR COCOA POWDER, WHIPPED CREAM".</p>
+        <p id="mochaPrice">Price of each serving: P11.80</p>
+
+        
+        <button type="button" onclick="closeMochaDetails()">Click to Exit</button>
+    </div>
+</p>
+
+<script>
+    
+    function showMochaDetails() {
+        document.getElementById("mochaDetails").hidden = false;
+    }
+
+
+    function closeMochaDetails() {
+        document.getElementById("mochaDetails").hidden = true;
+    }
+</script>                 
 
 
 
