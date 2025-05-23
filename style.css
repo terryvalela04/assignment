@@ -1,5 +1,52 @@
-body { 
-  background-image:url ('coffee background.jpg');
+/* Define CSS variables for easy theme changes */
+:root {
+  --primary-color: #f3961c;   /* Orange for nav buttons */
+  --secondary-color: #3b141c; /* Dark maroon for nav bar background */
+  --text-color: #ffffff;      /* White text for contrast */
+  --hover-color: #d9780c;     /* Slightly darker orange on hover */
 }
 
+/* Reset and base styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
 
+/* Header and nav styles */
+header {
+  background-color: var(--secondary-color);
+  padding: 1rem;
+  text-align: center;
+  color: var(--text-color);
+}
+
+nav a {
+  color: var(--text-color);
+  background-color: var(--primary-color);
+  padding: 0.5rem 1rem;
+  margin: 0 5px;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+nav a:hover {
+  background-color: var(--hover-color);
+}
+
+main {
+  padding: 2rem;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* Footer styles */
+footer {
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+  text-align: center;
+  padding: 1rem;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
