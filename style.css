@@ -2,7 +2,7 @@
 :root {
   --primary-color: #f3961c;   /* Orange for nav buttons */
   --secondary-color: #3b141c; /* Dark maroon for nav bar background */
-  --text-color:  #000000;      /* Black text for contrast */
+  --text-color: #FFFFFF;      /* Black text for contrast */
   --hover-color: #d9780c;     /* Slightly darker orange on hover */
 }
 
@@ -15,7 +15,7 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  color: #000000;
+  color: #FFFFFF;
 
 
 }
