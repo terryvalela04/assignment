@@ -10,6 +10,7 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
+  font-color:#000000;
   background-image: url("coffee background.jpg");
   background-size: cover;
   background-position: center;
