@@ -2,7 +2,7 @@
 :root {
   --primary-color: #f3961c;   /* Orange for nav buttons */
   --secondary-color: #3b141c; /* Dark maroon for nav bar background */
-  --text-color: #ffffff;      /* White text for contrast */
+  --text-color:  #000000;      /* Black text for contrast */
   --hover-color: #d9780c;     /* Slightly darker orange on hover */
 }
 
@@ -10,7 +10,6 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  font-color:#000000;
   background-image: url("coffee background.jpg");
   background-size: cover;
   background-position: center;
@@ -54,7 +53,7 @@ footer {
   color: var(--text-color);
   text-align: center;
   padding: 1rem;
-  position: relative;
+  position: fixed;
   bottom: 0;
   width: 100%;
 }
