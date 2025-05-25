@@ -30,6 +30,67 @@
       object-fit: cover;
       display: block;
     }
+
+    /* Animation: fade + slide in logo */
+@keyframes fadeSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+main img {
+  animation: fadeSlideIn 1.5s ease forwards;
+  transition: box-shadow 0.4s ease, transform 0.4s ease;
+  cursor: pointer;
+}
+
+main img:hover {
+  box-shadow: 0 0 20px 5px #f8c471; /* warm golden glow */
+  transform: scale(1.05);
+}
+
+/* Animated background gradient */
+body {
+  background: linear-gradient(-45deg, #ffb347, #ffcc33, #d2691e, #ffa500);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+}
+
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Navbar link color pulse on hover */
+.nav-link {
+  transition: color 0.5s ease;
+}
+
+.nav-link:hover {
+  animation: pulseColor 1s infinite alternate;
+}
+
+@keyframes pulseColor {
+  from {
+    color: #f8c471;
+  }
+  to {
+    color: #ffb347;
+  }
+}
+
   </style>
 </head>
 <body>
