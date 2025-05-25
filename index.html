@@ -12,13 +12,41 @@
       height: 100%;
       margin: 0;
     }
+
     body {
       display: flex;
       flex-direction: column;
       min-height: 100vh;
-      background: linear-gradient(-45deg, #ffb347, #ffcc33, #d2691e, #ffa500);
-      background-size: 400% 400%;
-      animation: gradientBG 15s ease infinite;
+      background: linear-gradient(-45deg, #ffb347, #ffcc33, #d2691e, #ffa500, #f8c471, #ff7f50);
+      background-size: 600% 600%;
+      animation: fadeIn 2s ease forwards, gradientBG 20s ease infinite;
+      opacity: 0;
+    }
+
+    /* Background animation */
+    @keyframes gradientBG {
+      0% {
+        background-position: 0% 50%;
+      }
+      25% {
+        background-position: 50% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      75% {
+        background-position: 50% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+
+    /* Fade-in animation */
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+      }
     }
 
     /* Main content layout */
@@ -44,7 +72,6 @@
       cursor: pointer;
     }
 
-    /* Adjust image size for smaller screens */
     @media (max-width: 576px) {
       main img {
         max-width: 90vw;
@@ -52,7 +79,6 @@
       }
     }
 
-    /* Animation: fade + slide in logo */
     @keyframes fadeSlideIn {
       0% {
         opacity: 0;
@@ -67,19 +93,6 @@
     main img:hover {
       box-shadow: 0 0 20px 5px #f8c471;
       transform: scale(1.05);
-    }
-
-    /* Animated background gradient */
-    @keyframes gradientBG {
-      0% {
-        background-position: 0% 50%;
-      }
-      50% {
-        background-position: 100% 50%;
-      }
-      100% {
-        background-position: 0% 50%;
-      }
     }
 
     /* Navbar link color pulse on hover */
