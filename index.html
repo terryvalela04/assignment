@@ -16,81 +16,89 @@
       display: flex;
       flex-direction: column;
       min-height: 100vh;
+      background: linear-gradient(-45deg, #ffb347, #ffcc33, #d2691e, #ffa500);
+      background-size: 400% 400%;
+      animation: gradientBG 15s ease infinite;
     }
+
+    /* Main content layout */
     main {
-      flex: 1; /* fills available vertical space */
+      flex: 1;
       display: flex;
       justify-content: center;
       align-items: center;
       padding: 0;
+      overflow: hidden;
     }
+
+    /* Responsive and animated logo image */
     main img {
       width: 100%;
-      height: 100%;
-      object-fit: cover;
+      max-width: 600px;
+      height: auto;
+      max-height: 80vh;
+      object-fit: contain;
       display: block;
+      animation: fadeSlideIn 1.5s ease forwards;
+      transition: box-shadow 0.4s ease, transform 0.4s ease;
+      cursor: pointer;
+    }
+
+    /* Adjust image size for smaller screens */
+    @media (max-width: 576px) {
+      main img {
+        max-width: 90vw;
+        max-height: 60vh;
+      }
     }
 
     /* Animation: fade + slide in logo */
-@keyframes fadeSlideIn {
-  0% {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
+    @keyframes fadeSlideIn {
+      0% {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
 
-main img {
-  animation: fadeSlideIn 1.5s ease forwards;
-  transition: box-shadow 0.4s ease, transform 0.4s ease;
-  cursor: pointer;
-}
+    main img:hover {
+      box-shadow: 0 0 20px 5px #f8c471;
+      transform: scale(1.05);
+    }
 
-main img:hover {
-  box-shadow: 0 0 20px 5px #f8c471; /* warm golden glow */
-  transform: scale(1.05);
-}
+    /* Animated background gradient */
+    @keyframes gradientBG {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
 
-/* Animated background gradient */
-body {
-  background: linear-gradient(-45deg, #ffb347, #ffcc33, #d2691e, #ffa500);
-  background-size: 400% 400%;
-  animation: gradientBG 15s ease infinite;
-}
+    /* Navbar link color pulse on hover */
+    .nav-link {
+      transition: color 0.5s ease;
+    }
 
-@keyframes gradientBG {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
+    .nav-link:hover {
+      animation: pulseColor 1s infinite alternate;
+    }
 
-/* Navbar link color pulse on hover */
-.nav-link {
-  transition: color 0.5s ease;
-}
-
-.nav-link:hover {
-  animation: pulseColor 1s infinite alternate;
-}
-
-@keyframes pulseColor {
-  from {
-    color: #f8c471;
-  }
-  to {
-    color: #ffb347;
-  }
-}
-
+    @keyframes pulseColor {
+      from {
+        color: #f8c471;
+      }
+      to {
+        color: #ffb347;
+      }
+    }
   </style>
 </head>
 <body>
