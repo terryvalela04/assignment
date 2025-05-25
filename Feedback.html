@@ -1,84 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">  
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />  
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>GIVE US YOUR FEEDBACK</title>
     <!-- Bootstrap CSS -->
-
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
-       <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
     <header>
-      
-        <nav>
-            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-
-<div class="container">
-
-
-
-<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-
-<span class="navbar-toggler-icon"></span>
-
-</button>
-             
-
-<div class="collapse navbar-collapse" id="navbarNav">
-
-<ul class="navbar-nav">
-
-<li class="nav-item">
-
-<a class="nav-link" href="index.html">Home</a>
-
-</li>
-
-<li class="nav-item">
-
-<a class="nav-link" href="about.html">About</a>
-
-</li>
-
-<li class="nav-item">
-
-<a class="nav-link" href="menu.html">Menu</a>
-
-</li>
-    <li class="nav-item">
-
-<a class="nav-link" href="contact.html">Contact</a>
-
-</li>
-     <li class="nav-item">
-
-<a class="nav-link" href="Feedback.html">Feedback</a>
-
-</li>
-      </ul>
-
-</div>
-
-</div> 
-           
-             <link rel="stylesheet" href="style.css">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="Feedback.html">Feedback</a></li>
+                    </ul>
+                </div>
+            </div> 
         </nav>
     </header>
 
-    <main>
-        <p>If you'd like to get in touch, feel free to email me at <a href="mailto:example@example.com">example@example.com</a>.</p>
+    <main class="container my-5">
+        <h2 class="mb-4">We Value Your Feedback</h2>
+        <form id="feedbackForm">
+            <div class="mb-3">
+                <label for="nameInput" class="form-label">Name</label>
+                <input type="text" class="form-control" id="nameInput" placeholder="Your Name" required />
+            </div>
+
+            <div class="mb-3">
+                <label for="emailInput" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="emailInput" placeholder="name@example.com" required />
+            </div>
+
+            <div class="mb-3">
+                <label for="ratingSelect" class="form-label">Rating</label>
+                <select class="form-select" id="ratingSelect" required>
+                    <option value="" disabled selected>Select rating</option>
+                    <option value="1">1 - Very Poor</option>
+                    <option value="2">2 - Poor</option>
+                    <option value="3">3 - Average</option>
+                    <option value="4">4 - Good</option>
+                    <option value="5">5 - Excellent</option>
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label for="commentsTextarea" class="form-label">Comments</label>
+                <textarea class="form-control" id="commentsTextarea" rows="4" placeholder="Your comments..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Submit Feedback</button>
+        </form>
+
+        <div id="feedbackMessage" class="mt-4" style="display:none;"></div>
     </main>
 
-    <footer>
+    <footer class="bg-dark text-white text-center p-3">
          <p>&copy; 2025 BIG STEPPA COFFEEHOUSE PASTRY AND BAKERY SHOP</p>
     </footer>
+
     <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
 
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script>
+      // Handle form submission (example: show thank you message)
+      document.getElementById('feedbackForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // prevent actual form submit
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+        // Just show a simple message (you can extend this for real submission)
+        const msg = document.getElementById('feedbackMessage');
+        msg.style.display = 'block';
+        msg.className = 'alert alert-success';
+        msg.textContent = 'Thank you for your feedback!';
+
+        // Optionally clear the form
+        this.reset();
+      });
+    </script>
 </body>
 </html>
-
